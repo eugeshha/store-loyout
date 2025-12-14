@@ -45,7 +45,6 @@ body {
   color: #333;
 }
 
-/* Cards View */
 .cards-view {
   display: grid;
   grid-template-columns: repeat(3, 320px);
@@ -126,7 +125,6 @@ body {
   color: #fff;
 }
 
-/* List View */
 .list-view {
   background: #f6f6f6;
   border-radius: 4px;
@@ -135,7 +133,7 @@ body {
 
 .shop-item {
   display: grid;
-  grid-template-columns: 120px 1fr 120px 180px;
+  grid-template-columns: 160px 1fr 160px 110px 180px;
   gap: 24px;
   align-items: center;
   padding: 18px 26px;
@@ -154,19 +152,12 @@ body {
 }
 
 .shop-item-img {
-  width: 100%;
-  height: 70px;
+  width: 160px;
+  height: 90px;
   object-fit: contain;
   background: transparent;
   border-radius: 0;
   padding: 0;
-}
-
-.shop-item-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-align: center;
 }
 
 .shop-item-name {
@@ -175,12 +166,14 @@ body {
   color: #222;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .shop-item-color {
   font-size: 13px;
   color: #555;
   text-transform: lowercase;
+  text-align: center;
 }
 
 .shop-item-price {
@@ -223,10 +216,17 @@ body {
   }
 
   .shop-item {
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 120px 1fr;
     gap: 15px;
   }
 
+  .shop-item-img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .shop-item-name,
+  .shop-item-color,
   .shop-item-price,
   .shop-item-btn {
     grid-column: 2;
