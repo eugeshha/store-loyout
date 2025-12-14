@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.store {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+.icon-switch {
+  font-size: 36px;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.icon-switch:hover {
+  color: #333;
+}
+
+/* Cards View */
+.cards-view {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 40px;
+  justify-content: center;
+}
+
+.shop-card {
+  background: #f6f6f6;
+  border-radius: 4px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  padding: 28px 28px 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+}
+
+.shop-card-img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  margin: 18px 0 22px;
+}
+
+.shop-card-name {
+  font-size: 22px;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shop-card-color {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.shop-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.shop-card-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e53935;
+}
+
+.shop-card-btn {
+  padding: 10px 22px;
+  background: transparent;
+  border: 1.5px solid #e53935;
+  color: #e53935;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.2s ease;
+}
+
+.shop-card-btn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+/* List View */
+.list-view {
+  background: #f6f6f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.shop-item {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px 180px;
+  gap: 24px;
+  align-items: center;
+  padding: 18px 26px;
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid #fff;
+  transition: background 0.3s ease;
+}
+
+.shop-item:last-child {
+  border-bottom: none;
+}
+
+.shop-item:hover {
+  background: #f3f3f3;
+}
+
+.shop-item-img {
+  width: 100%;
+  height: 70px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.shop-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.shop-item-name {
+  font-size: 22px;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.shop-item-color {
+  font-size: 13px;
+  color: #555;
+  text-transform: lowercase;
+}
+
+.shop-item-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e53935;
+  justify-self: center;
+}
+
+.shop-item-btn {
+  padding: 10px 22px;
+  background: transparent;
+  border: 1.5px solid #e53935;
+  color: #e53935;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  justify-self: end;
+}
+
+.shop-item-btn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .cards-view {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-view {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .shop-item {
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+  }
+
+  .shop-item-price,
+  .shop-item-btn {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 10px;
+  }
+
+  .shop-item-btn {
+    margin-top: 5px;
+  }
+}
